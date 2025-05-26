@@ -1,0 +1,5 @@
+FileVersion = 1
+Projects = {Versprechen = {Path = "."}}
+
+[Workspace]
+StartupProject = "Versprechen"
