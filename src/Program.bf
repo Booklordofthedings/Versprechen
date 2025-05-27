@@ -5,7 +5,7 @@ using System.Threading;
 
 class Program
 {
-	public static PoolExecutor executor = new .(6) ~ delete _;
+	public static PoolExecutor executor = new .(6);
 
 	public static void Main()
 	{
@@ -25,7 +25,6 @@ class Program
 
 
 		PrintSomeNumbers();
-		Thread.Sleep(3500);
 		DoSomethingWhileWaiting();
 		DependencyChains();
 
@@ -46,8 +45,8 @@ class Program
 				Console.WriteLine(val + 2);
 		}
 		delete e;
-
-		Console.ReadLine(scope .());
+		//Thread.Sleep(3500);
+		delete executor;
 	}
 
 	public static void PrintSomeNumbers()
@@ -56,7 +55,7 @@ class Program
 		{
 			Promise<void, void>.Create(.. scope .(), new (v) =>
 				{
-					Thread.Sleep(gRand.Next(0, 255));
+					//Thread.Sleep(gRand.Next(0, 255));
 					Console.WriteLine(i);
 					return .Ok;
 				}, executor);
@@ -67,7 +66,7 @@ class Program
 	{
 		var largeOperation = Promise<void, void>.Create(.. scope .(), new (v) =>
 			{
-				Thread.Sleep(1000);
+				//Thread.Sleep(1000);
 				Console.WriteLine("Done");
 				return .Ok;
 			}, executor);
@@ -79,7 +78,7 @@ class Program
 	public static void DependencyChains(int counter = 20)
 	{
 		Console.WriteLine(scope $"CHAIN: {counter}");
-		Thread.Sleep(100);
+		//Thread.Sleep(100);
 		var p = Promise<void, void>.Create(.. scope .(), new (v) =>
 			{
 				if (counter > 0)

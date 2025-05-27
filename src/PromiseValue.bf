@@ -98,6 +98,9 @@ class PromiseValue
 
 	public void Await()
 	{
+		if (References != 1)
+			Thread.SpinWait(10);
+
 		while (References != 1)
 		{
 			if (Executor != null)

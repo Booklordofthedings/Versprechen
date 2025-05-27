@@ -81,11 +81,12 @@ class PoolExecutor
 		workItems[target % threadCount].PushFront(v);
 	}
 
+	[Inline]
 	public virtual void TrySteal()
 	{
-		for (var i in workItems)
+		for (int i < threadCount)
 		{
-			var wi = i.Pop();
+			var wi = workItems[i].Pop();
 			if (wi != null)
 			{
 				ExecutePM(wi);
