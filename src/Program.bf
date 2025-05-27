@@ -35,7 +35,16 @@ class Program
 				if (v case .Ok(let val))
 					Console.WriteLine(val);
 			});
-		e.Await();
+
+		Console.WriteLine("Doing some calculations here");
+
+		var res = e.Await();
+		switch (res)
+		{
+			case .Err:
+			case .Ok(let val):
+				Console.WriteLine(val + 2);
+		}
 		delete e;
 
 		Console.ReadLine(scope .());
