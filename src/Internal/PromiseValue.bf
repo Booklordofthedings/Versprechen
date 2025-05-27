@@ -1,4 +1,4 @@
-namespace Versprechen;
+namespace Versprechen.Internal;
 
 using System;
 using System.Threading;

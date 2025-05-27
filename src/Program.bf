@@ -1,4 +1,5 @@
 namespace Versprechen;
+using Versprechen.Internal;
 
 using System;
 using System.Threading;
@@ -9,6 +10,7 @@ class Program
 
 	public static void Main()
 	{
+		/*
 		/*
 			PromiseAPI:
 				Promise<T, E>.Create(object, delegate, executor)
@@ -21,9 +23,6 @@ class Program
 			Promise.OnOk //What to do once the promise has been resolved sucesfully
 			Promise.OnErr //What to do once the promise has been errored
 		*/
-
-
-
 		PrintSomeNumbers();
 		DoSomethingWhileWaiting();
 		DependencyChains();
@@ -46,6 +45,8 @@ class Program
 		}
 		delete e;
 		//Thread.Sleep(3500);
+		*/
+
 		delete executor;
 	}
 

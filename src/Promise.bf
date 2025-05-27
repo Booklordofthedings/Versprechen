@@ -1,4 +1,5 @@
 namespace Versprechen;
+using Versprechen.Internal;
 
 using System;
 
