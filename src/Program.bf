@@ -47,7 +47,31 @@ class Program
 		//Thread.Sleep(3500);
 		*/
 
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+		LotsOfNumbers();
+
 		delete executor;
+	}
+
+	public static void LotsOfNumbers()
+	{
+		for (var i < 10000)
+		{
+			Promise<void, void>.Create(.. scope .(), new (v) =>
+				{
+					if (gRand.Next(0, 255) == 24)
+						Console.WriteLine("hit");
+					return .Ok;
+				}, executor);
+		}
 	}
 
 	public static void PrintSomeNumbers()
